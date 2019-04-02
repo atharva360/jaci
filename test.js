@@ -22,6 +22,10 @@ jaci.string("string : ",{required:false})
 })
 .then((res)=>{
     console.log(res);
+    return jaci.confirm("confirm (Yea/Nay):",{confirm:{true:"Y",false:"N"}})
+})
+.then((res)=>{
+    console.log(res);
     jaci.done();
     return;
 })

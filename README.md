@@ -38,8 +38,8 @@ finish reading user input, you have to call this method at the end of your promi
 
 ## Example
 ```
-const jaci = require("jaci");
-jaci.string("string : ")
+const jaci = require("./index");
+jaci.string("string : ",{required:false})
 .then((res)=>{
     console.log(res);
     return jaci.password("password :")
@@ -62,11 +62,15 @@ jaci.string("string : ")
 })
 .then((res)=>{
     console.log(res);
+    return jaci.confirm("confirm (Yea/Nay):",{confirm:{true:"Y",false:"N"}})
+})
+.then((res)=>{
+    console.log(res);
     jaci.done();
     return;
 })
 .catch((e)=>{
-    jaci.done();
     console.log("error",e);
+    jaci.done();
 })
 ```

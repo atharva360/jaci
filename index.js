@@ -181,7 +181,7 @@ const jaci=()=>{
         return new Promise((resolve,reject)=>{
             try{
                 conf.type="confirm";
-                ask(question + ("(" +conf.confirm.true + "/" + conf.confirm.false + ")"),conf,(res)=>{
+                ask(question,conf,(res)=>{
                     resolve(res)
                 })
             }catch(e){
