@@ -3,7 +3,9 @@ a plugin for creating CLI user-input as promises for node.js
 
 ## Installation
 ``` npm install jaci --save ```
+
 Then initialize using 
+
 ``` 
 const jaci = require("jaci"); 
 ```
@@ -26,7 +28,7 @@ finish reading user input, you have to call this method at the end of your promi
 
 ## Options
 - option.default[string][optional], the default value if user did not enter anything
-- option.required[boolean][optional][default:true], set this is set to ``` false ``` then user won't be asked again if they did not input anything
+- option.required[boolean][optional][default:true], if this is set to ``` false ``` then user won't be asked again if they did not input anything
 - option.reject[string][optional],reject user input if the input contain any of the character you set here
 - option.min[integer][optional][default:0], set minimum length (minimum value for ```number``` method) of user input, if it's ```0``` then there is no minimum;
 - option.max[integer][optional][default:0], set maximum length (maximum value for ```number``` method) of user input, if it's ```0``` then there is no maximum;
