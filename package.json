@@ -1,6 +1,6 @@
 {
   "name": "jaci",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a plugin for creating CLI user-input as promises for node.js",
   "main": "index.js",
   "scripts": {
