@@ -5,7 +5,6 @@ let DEFAULT_CONFIG ={
     min:0,
     reject:false,
     required:false,
-    option:false,
     confirm:{true:"Y",false:"n"},
     default:false,
     muted:false,

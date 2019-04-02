@@ -1,5 +1,5 @@
 const jaci = require("./index");
-jaci.string("string : ")
+jaci.string("string : ",{required:false})
 .then((res)=>{
     console.log(res);
     return jaci.password("password :")
@@ -27,4 +27,5 @@ jaci.string("string : ")
 })
 .catch((e)=>{
     console.log("error",e);
+    jaci.done();
 })
