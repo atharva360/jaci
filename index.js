@@ -52,14 +52,14 @@ const jaci=()=>{
     const testAlpha=(str,conf)=>{
         var letters = /^[A-Za-z]+$/;
         if(!str.match(letters)){
-            return new Error('Please input only letters and numbers');
+            return new Error('Please input only letters');
         }
         return str;
     }
     const testAlphanum = (str,conf)=>{
         var letters = /^[0-9a-zA-Z]+$/;
         if(!str.match(letters)){
-            return new Error('Please input only letters');
+            return new Error('Please input only letters and number');
         }
         return str;
     }
@@ -101,7 +101,12 @@ const jaci=()=>{
             return new Error('unknown option');
         }
     }
-    
+    const testRegex=(str,conf)=>{
+        if(!str.match(conf.regex)){
+            return new Error('not match');
+        }
+        return str;
+    }
     const test = (str,conf)=>{
         let result = testDefault(str,conf);
         if(!(result instanceof Error)){
@@ -132,7 +137,9 @@ const jaci=()=>{
         if(conf.type=="alphanum"){
             result = testAlphanum(str,conf);
         }
-        
+        if(conf.type=="regex"){
+            result = testRegex(str,conf);
+        }
         return result;
     }
     const ask=(q,c,cb)=>{
@@ -259,12 +266,29 @@ const jaci=()=>{
             }catch(e){
                 reject(e);
             }
-         })
+        })
+    }
+    const regex = (question,conf)=>{
+        if(!conf || !conf.regex){
+            console.log(conf);
+            return new Error(" no regex pattern defined");
+        }
+        conf.type="regex";
+        return new Promise((resolve,reject)=>{
+            try{
+                ask(question,conf,(res)=>{
+                    resolve(res)
+                })
+            }catch(e){
+                reject(e);
+            }
+        })
     }
     const done=()=>{
         rl.close();
     }
     return {
+        regex:regex,
         done:done,
         password:password,
         alpha:alpha,

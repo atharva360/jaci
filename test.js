@@ -18,7 +18,12 @@ jaci.string("string : ")
 })
 .then((res)=>{
     console.log(res);
+    return jaci.regex("regex:",{regex:/^[A-Za-z]+$/})
+})
+.then((res)=>{
+    console.log(res);
     jaci.done();
+    return;
 })
 .catch((e)=>{
     console.log("error",e);
