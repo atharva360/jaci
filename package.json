@@ -1,0 +1,24 @@
+{
+  "name": "jaci",
+  "version": "0.0.1",
+  "description": "comand line prompt plugin for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angga2oioi/jaci.git"
+  },
+  "keywords": [
+    "command",
+    "line",
+    "prompt"
+  ],
+  "author": "angga2oioi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angga2oioi/jaci/issues"
+  },
+  "homepage": "https://github.com/angga2oioi/jaci#readme"
+}

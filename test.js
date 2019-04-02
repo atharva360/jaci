@@ -1,0 +1,25 @@
+const jaci = require("./index");
+jaci.string("string : ")
+.then((res)=>{
+    console.log(res);
+    return jaci.password("password :")
+})
+.then((res)=>{
+    console.log(res);
+    return jaci.alpha("alpha :")
+})
+.then((res)=>{
+    console.log(res);
+    return jaci.alphanum("alphanum :")
+})
+.then((res)=>{
+    console.log(res);
+    return jaci.number("number :")
+})
+.then((res)=>{
+    console.log(res);
+    jaci.done();
+})
+.catch((e)=>{
+    console.log("error",e);
+})
