@@ -38,7 +38,7 @@ finish reading user input, you have to call this method at the end of your promi
 
 ## Example
 ```
-const jaci = require("./index");
+const jaci = require("jaci");
 jaci.string("string : ",{required:false})
 .then((res)=>{
     console.log(res);
