@@ -1,7 +1,7 @@
-# jaci
+# Command Prompt tutorials
 a plugin for creating CLI user-input as promises for node.js
 
-## Installation
+## Installation in easy way
 ``` npm install jaci --save ```
 
 Then initialize using 
